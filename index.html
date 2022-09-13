@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Bootstrap Linking -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Css linking -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></head>
+<body>
+    <div class="container-sm my-4" style="background-color: white;">
+        <div class="row">
+            <div class="col-2" style="background-color: black;"></div>
+
+            <div class="col-8 border my-4">
+                <h1 class="text-center">Real Time Weather Condition</h1>
+                <center><i class="fa-solid fa-sun" style="color: yellow;" id="icon"> sunny</i></center>
+                <h2 class="text-center">Karachi, Pk</h2>
+                <h3 class="text-center" id="dateDay">September 13,2022 || Tuesday</h3>
+                <h3 class="text-center">Condition: Drizzle</h3>
+                <h2 class="text-center">Current Temperature:27°C</h2>
+                <h2 class="text-center">Min Temperature:22°C</h2>
+                <h2 class="text-center">Max Temperature:22°C</h2>
+                <h2 class="text-center">Feels Like: 24°C</h2>
+                <h3 class="text-center">Wind Speed:0</h3>
+                <h3 class="text-center">Pressure:1001</h3>
+                <h2 class="text-center">Humidity:89</h2> 
+            </div>
+            <div class="col-2" style="background-color: black;"></div>
+        </div>
+    </div>
+    <script>
+        const icon=document.getElementById("icon");
+        // console.log(icon);
+        const dateDay=document.getElementById("dateDay");
+        function getMonth(){
+            let date = new Date();
+            let weekDays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            const day=weekDays[date.getDay()];
+            // console.log(day)
+            let yearMonths=["January","Feburary","March","April","May","June","July","August","September","October","November","December"]
+            let month = yearMonths[date.getMonth()]
+            // console.log(month)
+            let newDate = date.getDate();
+            // console.log(newDate);
+            let year = date.getFullYear();
+            // console.log(year);
+            let result = `${month} ${newDate},${year} || ${day}`
+            console.log(result);
+            return result
+        }
+        dateDay.innerHTML=getMonth();
+        icon.setAttribute("class","fa-solid fa-cloud");
+        icon.style.color="blue";
+        icon.innerHTML="Cloudy"
+        console.log(icon);
+
+    </script>
+    
+</body>
+</html>
