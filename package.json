@@ -1,0 +1,22 @@
+{
+  "name": "complete-weather-app",
+  "version": "1.0.0",
+  "description": "It gives complete weather live updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Safa-Rizwan/Complete-Weather-App.git"
+  },
+  "author": "Safa Rizwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Safa-Rizwan/Complete-Weather-App/issues"
+  },
+  "homepage": "https://github.com/Safa-Rizwan/Complete-Weather-App#readme",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}
